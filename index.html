@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amore — Where Love Finds Its Words</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-heart">
+        <svg viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 85C50 85 5 55 5 28C5 14.7 15.7 4 29 4C37.4 4 44.8 8.1 50 14.4C55.2 8.1 62.6 4 71 4C84.3 4 95 14.7 95 28C95 55 50 85 50 85Z" stroke="url(#loaderGrad)" stroke-width="2" fill="none"/>
+          <defs>
+            <linearGradient id="loaderGrad" x1="5" y1="4" x2="95" y2="85" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#ff6b9d"/>
+              <stop offset="100%" stop-color="#c44569"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <p class="loader-text">RUDRO</p>
+    </div>
+  </div>
+
+  <!-- Canvas for particles -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">YOUR RUDRO</div>
+    <div class="nav-links">
+      <a href="#about">Story</a>
+      <a href="#generator">Create</a>
+      <a href="#examples">Gallery</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#generator" class="btn-nav">Begin ↓</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-orb orb-1"></div>
+    <div class="hero-bg-orb orb-2"></div>
+    <div class="hero-bg-orb orb-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal-up">The Art of Love</div>
+      <h1 class="hero-title">
+        <span class="reveal-up delay-1">Words that</span>
+        <span class="reveal-up delay-2 italic-serif">touch the soul.</span>
+        <span class="reveal-up delay-3">Moments that</span>
+        <span class="reveal-up delay-4 italic-serif gradient-text">last forever.</span>
+      </h1>
+      <p class="hero-sub reveal-up delay-5">Craft a love message so beautiful, it becomes a memory.</p>
+      <div class="hero-actions reveal-up delay-6">
+        <a href="#generator" class="btn-primary">
+          <span>Create Your Message</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#examples" class="btn-ghost">See examples</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+
+    <!-- Floating hearts -->
+    <div class="float-hearts" id="floatHearts"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-left">
+        <div class="section-label reveal-left">Our Philosophy</div>
+        <h2 class="about-title reveal-left delay-1">
+          Love deserves<br/><em>extraordinary</em><br/>words.
+        </h2>
+      </div>
+      <div class="about-right">
+        <p class="about-p reveal-right delay-2">Every couple has a universe of shared memories, inside jokes, and quiet tender moments. We believe those feelings deserve more than a generic greeting card.</p>
+        <p class="about-p reveal-right delay-3">Amore transforms names, occasions, and emotions into something truly singular — a message that sounds like <em>you</em>, written for <em>them</em>.</p>
+        <div class="about-stats reveal-right delay-4">
+          <div class="stat">
+            <span class="stat-num" data-target="50000">0</span>
+            <span class="stat-label">Messages created</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="120">0</span>
+            <span class="stat-label">Countries reached</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="98">0</span>
+            <span class="stat-label">% Smiles guaranteed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-image-row">
+      <div class="img-card img-card-1 reveal-scale">
+        <div class="img-card-inner">
+          <svg width="60" height="55" viewBox="0 0 100 90"><path d="M50 85C50 85 5 55 5 28C5 14.7 15.7 4 29 4C37.4 4 44.8 8.1 50 14.4C55.2 8.1 62.6 4 71 4C84.3 4 95 14.7 95 28C95 55 50 85 50 85Z" fill="url(#hg1)"/><defs><linearGradient id="hg1" x1="0" y1="0" x2="100" y2="90"><stop offset="0%" stop-color="#ff6b9d"/><stop offset="100%" stop-color="#c44569"/></linearGradient></defs></svg>
+          <p>Anniversaries</p>
+        </div>
+      </div>
+      <div class="img-card img-card-2 reveal-scale delay-1">
+        <div class="img-card-inner">
+          <svg width="60" height="55" viewBox="0 0 100 90"><path d="M50 85C50 85 5 55 5 28C5 14.7 15.7 4 29 4C37.4 4 44.8 8.1 50 14.4C55.2 8.1 62.6 4 71 4C84.3 4 95 14.7 95 28C95 55 50 85 50 85Z" fill="url(#hg2)"/><defs><linearGradient id="hg2" x1="0" y1="0" x2="100" y2="90"><stop offset="0%" stop-color="#a29bfe"/><stop offset="100%" stop-color="#6c5ce7"/></linearGradient></defs></svg>
+          <p>Proposals</p>
+        </div>
+      </div>
+      <div class="img-card img-card-3 reveal-scale delay-2">
+        <div class="img-card-inner">
+          <svg width="60" height="55" viewBox="0 0 100 90"><path d="M50 85C50 85 5 55 5 28C5 14.7 15.7 4 29 4C37.4 4 44.8 8.1 50 14.4C55.2 8.1 62.6 4 71 4C84.3 4 95 14.7 95 28C95 55 50 85 50 85Z" fill="url(#hg3)"/><defs><linearGradient id="hg3" x1="0" y1="0" x2="100" y2="90"><stop offset="0%" stop-color="#fd79a8"/><stop offset="100%" stop-color="#e84393"/></linearGradient></defs></svg>
+          <p>Birthdays</p>
+        </div>
+      </div>
+      <div class="img-card img-card-4 reveal-scale delay-3">
+        <div class="img-card-inner">
+          <svg width="60" height="55" viewBox="0 0 100 90"><path d="M50 85C50 85 5 55 5 28C5 14.7 15.7 4 29 4C37.4 4 44.8 8.1 50 14.4C55.2 8.1 62.6 4 71 4C84.3 4 95 14.7 95 28C95 55 50 85 50 85Z" fill="url(#hg4)"/><defs><linearGradient id="hg4" x1="0" y1="0" x2="100" y2="90"><stop offset="0%" stop-color="#ff7675"/><stop offset="100%" stop-color="#d63031"/></linearGradient></defs></svg>
+          <p>Valentine's</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GENERATOR -->
+  <section class="generator" id="generator">
+    <div class="gen-bg-glow"></div>
+    <div class="gen-container">
+      <div class="section-label reveal-up centered">Create Your Message</div>
+      <h2 class="gen-title reveal-up delay-1">
+        Two names.<br/>One occasion.<br/><em>Infinite love.</em>
+      </h2>
+
+      <div class="gen-card reveal-up delay-2">
+        <div class="gen-card-inner">
+          <!-- Inputs -->
+          <div class="input-row">
+            <div class="input-group">
+              <label>Their name</label>
+              <input type="text" id="name1" placeholder="e.g. SNEHA" autocomplete="off" />
+            </div>
+            <div class="input-divider">
+              <svg width="24" height="24" viewBox="0 0 100 90"><path d="M50 85C50 85 5 55 5 28C5 14.7 15.7 4 29 4C37.4 4 44.8 8.1 50 14.4C55.2 8.1 62.6 4 71 4C84.3 4 95 14.7 95 28C95 55 50 85 50 85Z" fill="url(#divGrad)"/><defs><linearGradient id="divGrad" x1="0" y1="0" x2="100" y2="90"><stop offset="0%" stop-color="#ff6b9d"/><stop offset="100%" stop-color="#c44569"/></linearGradient></defs></svg>
+            </div>
+            <div class="input-group">
+              <label>Your name</label>
+              <input type="text" id="name2" placeholder="e.g. UTSA" autocomplete="off" />
+            </div>
+          </div>
+
+          <!-- Occasion -->
+          <div class="occasion-label">Select an occasion</div>
+          <div class="occasion-grid" id="occasionGrid">
+            <button class="occ-btn active" data-occ="Anniversary">Anniversary</button>
+            <button class="occ-btn" data-occ="Birthday">Birthday</button>
+            <button class="occ-btn" data-occ="Valentine's Day">Valentine's Day</button>
+            <button class="occ-btn" data-occ="Proposal">Proposal</button>
+            <button class="occ-btn" data-occ="Good Morning">Good Morning</button>
+            <button class="occ-btn" data-occ="Good Night">Good Night</button>
+            <button class="occ-btn" data-occ="Missing You">Missing You</button>
+            <button class="occ-btn" data-occ="Just Because">Just Because</button>
+          </div>
+
+          <div class="input-group file-upload-group">
+            <label>Add a Memory (Optional)</label>
+            <input type="file" id="photoUpload" accept="image/*" class="custom-file-input" />
+          </div>
+
+          <!-- Generate -->
+          <button class="btn-generate" id="generateBtn" onclick="generateMessage()">
+            <span class="btn-gen-text">Generate My Message</span>
+            <span class="btn-gen-icon">
+              <svg width="20" height="20" viewBox="0 0 100 90"><path d="M50 85C50 85 5 55 5 28C5 14.7 15.7 4 29 4C37.4 4 44.8 8.1 50 14.4C55.2 8.1 62.6 4 71 4C84.3 4 95 14.7 95 28C95 55 50 85 50 85Z" fill="white"/></svg>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Output -->
+      <div class="output-area" id="outputArea">
+        <div class="output-card" id="outputCard">
+          <div class="output-photo-container" id="outputPhotoContainer">
+            <img id="outputPhoto" src="" alt="Memory" />
+          </div>
+          <div class="output-occasion-tag" id="outputOccTag"></div>
+          <div class="output-names" id="outputNames"></div>
+          <div class="output-message" id="outputMessage"></div>
+          <div class="output-actions">
+            <button class="out-btn" onclick="downloadCard()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Download
+            </button>
+            <button class="out-btn" onclick="copyOutput()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke="currentColor" stroke-width="1.5"/></svg>
+              Copy
+            </button>
+            <button class="out-btn" onclick="generateMessage()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M1 4v6h6M23 20v-6h-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.49 9A9 9 0 005.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 013.51 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Regenerate
+            </button>
+            <button class="out-btn whatsapp-btn" onclick="shareWhatsApp()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXAMPLES -->
+  <section class="examples" id="examples">
+    <div class="section-label reveal-up centered">Love Gallery</div>
+    <h2 class="examples-title reveal-up delay-1">Messages that<br/><em>moved hearts.</em></h2>
+
+    <div class="examples-track" id="examplesTrack">
+      <div class="ex-card">
+        <div class="ex-occasion">Anniversary</div>
+        <p class="ex-msg">"Every year with you feels like a new universe discovered — vast, extraordinary, and entirely ours. You are the greatest adventure of my life, and I would choose you in every version of it."</p>
+        <div class="ex-names">Meera & Rohan</div>
+      </div>
+      <div class="ex-card featured">
+        <div class="ex-occasion">Proposal</div>
+        <p class="ex-msg">"I used to wonder what forever meant. Then I met you, and suddenly eternity felt too short. Will you make mine longer?"</p>
+        <div class="ex-names">Sara & James</div>
+      </div>
+      <div class="ex-card">
+        <div class="ex-occasion">Valentine's Day</div>
+        <p class="ex-msg">"You are the poem I never knew how to write, the song I've been humming my whole life without knowing the words. Happy Valentine's Day, my entire heart."</p>
+        <div class="ex-names">Aisha & Daniel</div>
+      </div>
+      <div class="ex-card">
+        <div class="ex-occasion">Birthday</div>
+        <p class="ex-msg">"On the day the universe decided to create you, it outdid itself completely. Happy birthday to the person who makes every ordinary Tuesday feel like a celebration."</p>
+        <div class="ex-names">Lily & Tom</div>
+      </div>
+      <div class="ex-card">
+        <div class="ex-occasion">Good Night</div>
+        <p class="ex-msg">"As you close your eyes tonight, know that somewhere, someone is grateful the world has you in it. Sleep well, dream beautifully — I'll be here when you wake."</p>
+        <div class="ex-names">Nadia & Alex</div>
+      </div>
+    </div>
+    <div class="examples-nav">
+      <button class="ex-nav-btn" id="exPrev" onclick="scrollExamples(-1)">←</button>
+      <button class="ex-nav-btn" id="exNext" onclick="scrollExamples(1)">→</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-heart">
+      <svg width="32" height="30" viewBox="0 0 100 90"><path d="M50 85C50 85 5 55 5 28C5 14.7 15.7 4 29 4C37.4 4 44.8 8.1 50 14.4C55.2 8.1 62.6 4 71 4C84.3 4 95 14.7 95 28C95 55 50 85 50 85Z" fill="url(#footGrad)"/><defs><linearGradient id="footGrad" x1="0" y1="0" x2="100" y2="90"><stop offset="0%" stop-color="#ff6b9d"/><stop offset="100%" stop-color="#c44569"/></linearGradient></defs></svg>
+    </div>
+    <p class="footer-brand">RUDRO</p>
+    <p class="footer-tagline">Where love finds its words.</p>
+    <p class="footer-copy">Crafted with ♥ for every love story.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
